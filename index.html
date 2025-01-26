@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #ff6f61;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e64a45;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="revealButton">Click Me!</button>
+    <h1 id="birthdayMessage" class="hidden">🎉 Happy Birthday! 🎂</h1>
+  </div>
+  <script>
+    document.getElementById('revealButton').addEventListener('click', function () {
+      const message = document.getElementById('birthdayMessage');
+      message.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
